@@ -10,8 +10,8 @@
 
     <View
         android:id="@+id/view2"
-        android:layout_width="413dp"
-        android:layout_height="728dp"
+        android:layout_width="417dp"
+        android:layout_height="753dp"
         android:background="@drawable/element3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,4 +32,146 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view2" />
+
+    <EditText
+        android:id="@+id/txtNum"
+        android:layout_width="137dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/txtshape"
+        android:ems="10"
+        android:hint="N° de ticket"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/txtTitulo"
+        android:layout_width="211dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/txtshape"
+        android:ems="10"
+        android:hint="Título del ticket"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/txtNum"
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/txtDescripcion"
+        android:layout_width="358dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="224dp"
+        android:background="@drawable/txtshape"
+        android:ems="10"
+        android:hint="Descripción del ticket"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtAutor"
+        android:layout_width="186dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/txtshape"
+        android:ems="10"
+        android:hint="Autor del ticket"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/txtEmail"
+        app:layout_constraintEnd_toStartOf="@+id/txtEstado"
+        app:layout_constraintHorizontal_bias="0.591"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtEstado"
+        android:layout_width="180dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/txtshape"
+        android:ems="10"
+        android:hint="Estado del ticket"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/txtEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="254dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/txtshape"
+        android:ems="10"
+        android:hint="Email del autor"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="186dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="204dp"
+        android:backgroundTint="#E0FBFC"
+        android:drawableRight="@drawable/ic_register"
+        android:text="Registrar ticket"
+        android:textColor="#293241"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnVerRegistro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnVerRegistro"
+        android:layout_width="186dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="204dp"
+        android:backgroundTint="#E0FBFC"
+        android:drawableRight="@drawable/ic_check"
+        android:text="Ver registro"
+        android:textColor="#293241"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="171dp"
+        android:layout_height="172dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/registrar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
