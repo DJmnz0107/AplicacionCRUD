@@ -4,8 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -71,6 +73,33 @@ class activity_registrarDatos : AppCompatActivity() {
             val pantallaRegistro = Intent(this, activity_data::class.java)
             startActivity(pantallaRegistro)
         }
+
+        val imgCerrarSesion = findViewById<ImageView>(R.id.imgCerrarSesion)
+
+        imgCerrarSesion.setOnClickListener {
+
+            val context = this
+
+            val builder = AlertDialog.Builder(context)
+
+            builder.setTitle("Cerrar sesión")
+            builder.setMessage("¿Desea cerrar sesión en la aplicación?")
+
+            builder.setPositiveButton("Si") { dialog, which ->
+
+                val pantallaLogin = Intent(this, MainActivity::class.java)
+                startActivity(pantallaLogin)
+            }
+
+            builder.setNegativeButton("No") { dialog, which ->
+                dialog.dismiss()
+            }
+            val dialog = builder.create()
+
+            dialog.show()
+        }
+
+
 
 
 

@@ -1,5 +1,6 @@
 package RecyclerViewHelpers
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import diego.jimenez.aplicacioncrud.R
+import diego.jimenez.aplicacioncrud.activity_informacionDetallada
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -49,6 +51,10 @@ class Adaptador(var Datos: List<dataClassTicket>):RecyclerView.Adapter<ViewHolde
             val commit = objConexion.prepareStatement("commit")
             commit.executeUpdate()
         }
+
+        Datos = listaDatos.toList()
+        notifyItemRemoved(position)
+        notifyDataSetChanged()
 
 
     }
@@ -145,6 +151,22 @@ class Adaptador(var Datos: List<dataClassTicket>):RecyclerView.Adapter<ViewHolde
             val dialog = builder.create()
 
             dialog.show()
+        }
+
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+
+            val pantallaInformacion = Intent(context, activity_informacionDetallada::class.java)
+
+            pantallaInformacion.putExtra("numTicket", item.numeroTicket)
+            pantallaInformacion.putExtra("titulo", item.titulo)
+            pantallaInformacion.putExtra("descripcion", item.descripcion)
+            pantallaInformacion.putExtra("autor", item.autor)
+            pantallaInformacion.putExtra("email", item.email)
+            pantallaInformacion.putExtra("estado", item.estado)
+
+            context.startActivity(pantallaInformacion)
+
         }
 
 
